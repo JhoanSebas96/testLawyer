@@ -289,6 +289,17 @@ header{
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
+    .header{
+        display: grid;
+        grid-template-rows: 100px auto;
+    }
+    .text-header{
+        padding: 0;
+        place-self: center;
+    }
+    .text-header p{
+        margin: 0;
+    }
     .open-menu,
     .close-menu{
         display: block;
