@@ -19,6 +19,8 @@ header{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    display: grid;
+    grid-template-rows: max-content;
 }
 
 .nav {
@@ -58,8 +60,11 @@ header{
     text-decoration: underline;
 }
 .text-header{
+    align-self:center;
+    justify-self: center;
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    padding: 0;
 }
 .header p{
     font-family: Prata, serif;
@@ -69,7 +74,6 @@ header{
     color:#fff;
     text-transform: uppercase;
     text-shadow: 0 .3rem .5rem rgba(0,0,0,9);
-    margin-top: 10%;
 }
 /* info */
 .info{
@@ -220,20 +224,26 @@ header{
     background:#fff
 }
 /* footer */
-.footer {
-    text-align: center;
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.footer-nav {
-    width: 90%;
-    max-width: 400px;
+.footer-content ul{
+    padding: 0;
+}
+.footer-img{
     display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+    
+}
+.footer-img div{
+    place-self: center;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
 }
 .footer-link {
     text-decoration: none;
-    padding: 1.5rem 0 2rem;
     color: #000;
 }
 .footer-link:hover{
@@ -241,7 +251,6 @@ header{
 }
 .footer-logo{
     padding-right: 10px;
-    max-width: 60px;
 }
 
 /* media queries */
@@ -254,7 +263,6 @@ header{
 @media screen and (max-width:992px){
     .text-header p{
         font-size: 2.5em;
-        margin-top: 30%;
     }
     .content-home{
         justify-content: space-around;
@@ -288,17 +296,6 @@ header{
         align-items: center;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
-    }
-    .header{
-        display: grid;
-        grid-template-rows: 100px auto;
-    }
-    .text-header{
-        padding: 0;
-        place-self: center;
-    }
-    .text-header p{
-        margin: 0;
     }
     .open-menu,
     .close-menu{
@@ -358,5 +355,19 @@ header{
     }
     .table{
         min-width: 300px;
+    }
+    .footer-content{
+        padding: 30px 10px;
+        display:flex;
+        flex-direction: column;
+    }
+    .footer-img{
+        flex-direction: column;
+    }
+    .footer-links{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
     }
 }

@@ -136,12 +136,14 @@ body {
     display: grid;
     grid-template-rows: 300px 2fr;
     grid-template-columns: 100%;
+    
 }
 .contact-content{
-    background-color: #eee;
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 40px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 20px 0px inset
 }
 .contact-info{
     background-color:#fff;
@@ -150,11 +152,12 @@ body {
     padding:40px;
     place-self: center;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.63);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .contact-info ul{
     padding:0;
 }
+
 .contact-info ul i{
     padding-right: 5px;
 }
@@ -167,7 +170,7 @@ body {
 .contact-map{
     place-self: center start;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.63);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .contact-title{
     background-image: url(../assest/contact.jpg);
@@ -187,20 +190,27 @@ body {
     
 }
 /* footer */
-.footer {
-    text-align: center;
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.footer-nav {
-    width: 90%;
-    max-width: 400px;
+.footer-content ul{
+    padding: 0;
+}
+.footer-img{
     display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+    
+}
+.footer-img div{
+    place-self: center;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
 }
 .footer-link {
     text-decoration: none;
-    padding: 1.5rem 0 2rem;
     color: #000;
 }
 .footer-link:hover{
@@ -208,7 +218,6 @@ body {
 }
 .footer-logo{
     padding-right: 10px;
-    max-width: 60px;
 }
 
 @media screen and (max-width:992px){
@@ -306,5 +315,19 @@ body {
     }
     .contact-map iframe{
         width: 100%;
+    }
+    .footer-content{
+        padding: 30px 10px;
+        display:flex;
+        flex-direction: column;
+    }
+    .footer-img{
+        flex-direction: column;
+    }
+    .footer-links{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
     }
 }
